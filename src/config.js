@@ -13,7 +13,7 @@ export const AppConfig = {
     import.meta.env.VITE_API_URL || 
     (import.meta.env.DEV 
       ? '' // Empty string for relative URLs in development (Vite proxy will handle it)
-      : 'http://148.230.108.208'),
+      : 'piecespoidslourdsguinee.com'),
   // ===== IMAGES =====
   // In development: use relative URL (Vite proxy handles it)
   // In production: use full Beam Cloud URL
@@ -21,7 +21,7 @@ export const AppConfig = {
     import.meta.env.VITE_IMAGES_URL || 
     (import.meta.env.DEV
       ? '/images/products' // Relative URL in development (Vite proxy will handle it)
-      : 'http://148.230.108.208/images/products'),
+      : 'piecespoidslourdsguinee.com/images/products'),
 
   // ===== PAGINATION =====
   PRODUCTS_PER_PAGE: 10,
