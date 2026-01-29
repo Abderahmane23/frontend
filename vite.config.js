@@ -15,7 +15,7 @@ export default defineConfig({
       },
       // Proxy image requests in development
       '/images': {
-        target: 'http://148.230.108.208',
+        target: 'piecespoidslourdsguinee.com',
         changeOrigin: true,
         secure: true,
       }
