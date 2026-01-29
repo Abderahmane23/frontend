@@ -8,14 +8,14 @@ export default defineConfig({
     proxy: {
       // Proxy API requests in development to avoid CORS issues
       '/api': {
-        target: 'http://148.230.108.208',
+        target: 'https://piecespoidslourdsguinee.com',
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path, // Keep the /api prefix
       },
       // Proxy image requests in development
       '/images': {
-        target: 'piecespoidslourdsguinee.com',
+        target: 'https://piecespoidslourdsguinee.com',
         changeOrigin: true,
         secure: true,
       }
