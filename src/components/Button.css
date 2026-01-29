@@ -1,0 +1,216 @@
+/* ============================================
+   BUTTON COMPONENT STYLES
+   Using Design Tokens
+   ============================================ */
+
+.btn {
+  /* Base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  
+  /* Typography */
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-decoration: none;
+  
+  /* Spacing */
+  padding: var(--button-padding-y) var(--button-padding-x);
+  
+  /* Appearance */
+  border: 2px solid transparent;
+  border-radius: var(--button-radius);
+  background: none;
+  cursor: pointer;
+  
+  /* Size */
+  min-height: var(--button-min-height);
+  
+  /* Transitions */
+  transition: all var(--transition-base);
+  
+  /* Touch optimization */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* ==========================================
+   VARIANTS
+   ========================================== */
+
+/* PRIMARY - Accent Orange (Main CTA) */
+.btn--primary {
+  background: var(--color-accent-500);
+  color: var(--text-inverse);
+  border-color: var(--color-accent-500);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: var(--color-accent-700);
+  border-color: var(--color-accent-700);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* SECONDARY - Outline */
+.btn--secondary {
+  background: transparent;
+  color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: var(--color-primary-500);
+  color: var(--text-inverse);
+  transform: translateY(-1px);
+}
+
+.btn--secondary:active:not(:disabled) {
+  background: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+  transform: translateY(0);
+}
+
+/* GHOST - Minimal (Text + Icon) */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: transparent;
+  padding: var(--space-1) var(--space-2);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--color-gray-100);
+  color: var(--text-primary);
+}
+
+.btn--ghost:active:not(:disabled) {
+  background: var(--color-gray-300);
+}
+
+/* DANGER - Destructive Actions */
+.btn--danger {
+  background: var(--color-danger);
+  color: var(--text-inverse);
+  border-color: var(--color-danger);
+}
+
+.btn--danger:hover:not(:disabled) {
+  background: #B91C1C; /* Darker red */
+  border-color: #B91C1C;
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   SIZES
+   ========================================== */
+
+.btn--small {
+  font-size: var(--font-size-sm);
+  padding: var(--space-1) var(--space-2);
+  min-height: 36px;
+}
+
+.btn--medium {
+  /* Default size - already set in base */
+}
+
+.btn--large {
+  font-size: var(--font-size-lg);
+  padding: var(--space-3) var(--space-6);
+  min-height: 52px;
+}
+
+/* ==========================================
+   MODIFIERS
+   ========================================== */
+
+/* Full width */
+.btn--full {
+  width: 100%;
+}
+
+/* Loading state */
+.btn--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn__spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-lg);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Disabled state */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ==========================================
+   ICON & TEXT
+   ========================================== */
+
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.btn__text {
+  display: inline-block;
+}
+
+/* Icon-only button */
+.btn__text:empty + .btn__icon,
+.btn__icon:only-child {
+  margin: 0;
+}
+
+/* ==========================================
+   FOCUS STATES (Accessibility)
+   ========================================== */
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 480px) {
+  /* Larger touch targets on mobile */
+  .btn {
+    min-height: 48px;
+  }
+  
+  .btn--small {
+    min-height: 40px;
+  }
+}

@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Engine Detail - Full viewport height optimized
+   ========================================================================== */
+
+.engine-detail-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 640px) {
+  .engine-header {
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.engine-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+.engine-main-info {
+  padding: 1.25rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.engine-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.engine-model,
+.engine-release {
+  font-size: 0.95rem;
+  color: #6b7280;
+  text-align: left;
+}
+
+.engine-rates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.rate-item {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;          /* pill shape */
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.engine-issues {
+  margin: 1.5rem 0 2rem;
+}
+
+.issues-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.engine-desc {
+  line-height: 1.6;
+  color: #374151;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Related pieces section – takes remaining space nicely
+   ────────────────────────────────────────────────────────────────────────── */
+
+.related-section {
+  margin-top: auto;               /* pushes to bottom if there's space */
+  padding-top: 2rem;
+}
+
+.related-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.piece-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.18s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.piece-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: #cbd5e1;
+}
+
+.piece-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.piece-info {
+  padding: 0.75rem 1rem;
+}
+
+.piece-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #111827;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.piece-price {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Better mobile experience
+   ────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .engine-detail-container {
+    padding: 1rem 10px 2rem;
+    padding-left: 10px;
+  }
+  
+  .engine-name {
+    font-size: 1.35rem;
+    text-align: left;
+  }
+  
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}

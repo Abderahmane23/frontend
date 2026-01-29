@@ -1,0 +1,115 @@
+/* ============================================
+   BADGE COMPONENT STYLES
+   Using Design Tokens
+   ============================================ */
+
+.badge {
+  /* Base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Typography */
+  font-family: inherit;
+  font-size: var(--badge-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+  
+  /* Spacing */
+  padding: var(--badge-padding-y) var(--badge-padding-x);
+  
+  /* Appearance */
+  border-radius: var(--badge-radius);
+  
+  /* Transitions */
+  transition: all var(--transition-fast);
+}
+
+/* ==========================================
+   TYPES (Color Variants)
+   ========================================== */
+
+/* SUCCESS - Green (Available, In Stock) */
+.badge--success {
+  background: var(--color-success);
+  color: var(--text-inverse);
+}
+
+/* WARNING - Orange (Low Stock, Limited) */
+.badge--warning {
+  background: var(--color-warning);
+  color: var(--text-inverse);
+}
+
+/* DANGER - Red (Out of Stock, Unavailable) */
+.badge--danger {
+  background: var(--color-danger);
+  color: var(--text-inverse);
+}
+
+/* INFO - Blue (New, Featured) */
+.badge--info {
+  background: var(--color-info);
+  color: var(--text-inverse);
+}
+
+/* NEUTRAL - Gray (Default) */
+.badge--neutral {
+  background: var(--color-gray-300);
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   SIZES
+   ========================================== */
+
+.badge--small {
+  font-size: 0.625rem; /* 10px */
+  padding: 0.125rem 0.375rem; /* 2px 6px */
+}
+
+.badge--medium {
+  /* Default size - already set in base */
+}
+
+.badge--large {
+  font-size: var(--font-size-sm);
+  padding: 0.375rem 0.75rem; /* 6px 12px */
+}
+
+/* ==========================================
+   OUTLINE VARIANTS (Optional)
+   ========================================== */
+
+.badge--outline.badge--success {
+  background: transparent;
+  color: var(--color-success);
+  border: 1.5px solid var(--color-success);
+}
+
+.badge--outline.badge--warning {
+  background: transparent;
+  color: var(--color-warning);
+  border: 1.5px solid var(--color-warning);
+}
+
+.badge--outline.badge--danger {
+  background: transparent;
+  color: var(--color-danger);
+  border: 1.5px solid var(--color-danger);
+}
+
+.badge--outline.badge--info {
+  background: transparent;
+  color: var(--color-info);
+  border: 1.5px solid var(--color-info);
+}
+
+.badge--outline.badge--neutral {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1.5px solid var(--color-gray-300);
+}

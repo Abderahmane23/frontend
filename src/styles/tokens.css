@@ -1,0 +1,227 @@
+/* ============================================
+   DESIGN TOKENS - Auto Parts Application
+   Mobile-First, B2B Optimized
+   ============================================ */
+
+:root {
+  /* ==========================================
+     BRAND COLORS
+     ========================================== */
+  --color-primary-900: #0B2A3C;  /* Headers, navigation */
+  --color-primary-700: #1F4E6D;  /* Active states */
+  --color-primary-500: #3A7CA5;  /* Links, interactive elements */
+
+  /* ==========================================
+     NEUTRAL SCALE
+     ========================================== */
+  --color-gray-900: #1E1E1E;  /* Titles, primary text */
+  --color-gray-700: #4A4A4A;  /* Body text */
+  --color-gray-500: #6B7280;  /* Secondary text */
+  --color-gray-300: #E5E7EB;  /* Borders, dividers */
+  --color-gray-100: #F4F6F8;  /* Background, cards */
+  --color-white: #FFFFFF;
+
+  /* ==========================================
+     ACCENT (Primary CTA)
+     ========================================== */
+  --color-accent-500: #F57C00;  /* Primary CTA, "Buy" buttons */
+  --color-accent-700: #E65100;  /* CTA hover/pressed */
+
+  /* ==========================================
+     STATUS COLORS
+     ========================================== */
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+  --color-info: #3B82F6;
+
+  /* ==========================================
+     SPACING (8pt Grid System)
+     ========================================== */
+  --space-0: 0;
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+  --space-5: 2.5rem;   /* 40px */
+  --space-6: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-10: 5rem;    /* 80px */
+  --space-12: 6rem;    /* 96px */
+
+  /* ==========================================
+     TYPOGRAPHY SCALE
+     ========================================== */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px - body text */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ==========================================
+     BORDER RADIUS
+     ========================================== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* ==========================================
+     SHADOWS
+     ========================================== */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+               0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+               0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+               0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* ==========================================
+     Z-INDEX LAYERS
+     ========================================== */
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+
+  /* ==========================================
+     TRANSITIONS
+     ========================================== */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+
+  /* ==========================================
+     BREAKPOINTS (for reference in CSS)
+     ========================================== */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* ==========================================
+     COMPONENT-SPECIFIC TOKENS
+     ========================================== */
+
+  /* Touch Targets (Mobile UX) */
+  --touch-target-min: 44px;
+
+  /* Card */
+  --card-padding: var(--space-4);
+  --card-bg: var(--color-white);
+  --card-border: var(--color-gray-300);
+  --card-radius: var(--radius-lg);
+
+  /* Button */
+  --button-padding-y: var(--space-2);
+  --button-padding-x: var(--space-4);
+  --button-radius: var(--radius-lg);
+  --button-min-height: var(--touch-target-min);
+
+  /* Input */
+  --input-padding-y: var(--space-2);
+  --input-padding-x: var(--space-3);
+  --input-border: var(--color-gray-300);
+  --input-focus: var(--color-primary-500);
+  --input-radius: var(--radius-lg);
+
+  /* Badge */
+  --badge-padding-y: 0.25rem;
+  --badge-padding-x: 0.5rem;
+  --badge-radius: var(--radius-md);
+  --badge-font-size: var(--font-size-xs);
+}
+
+/* ==========================================
+   SEMANTIC COLOR ALIASES
+   (Context-specific names for better readability)
+   ========================================== */
+:root {
+  /* Backgrounds */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-gray-100);
+  --bg-accent: var(--color-accent-500);
+  --bg-success: var(--color-success);
+  --bg-warning: var(--color-warning);
+  --bg-danger: var(--color-danger);
+
+  /* Text */
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-700);
+  --text-tertiary: var(--color-gray-500);
+  --text-inverse: var(--color-white);
+  --text-link: var(--color-primary-500);
+  --text-accent: var(--color-accent-500);
+
+  /* Borders */
+  --border-default: var(--color-gray-300);
+  --border-focus: var(--color-primary-500);
+  --border-error: var(--color-danger);
+
+  /* Interactive States */
+  --state-hover: var(--color-primary-700);
+  --state-active: var(--color-primary-900);
+  --state-disabled: var(--color-gray-300);
+}
+
+/* ==========================================
+   UTILITY CLASSES (Optional - for quick prototyping)
+   ========================================== */
+
+/* Spacing utilities */
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.p-4 { padding: var(--space-4); }
+
+/* Text utilities */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-accent { color: var(--text-accent); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-danger { color: var(--color-danger); }
+
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* ==========================================
+   NOTES FOR DEVELOPERS:
+   
+   1. Always use these tokens instead of hardcoded values
+   2. Follow the 8pt spacing grid (--space-*)
+   3. Use semantic aliases when appropriate
+   4. Touch targets must be >= 44px (--touch-target-min)
+   5. Test color contrast for accessibility (WCAG AA minimum)
+   ========================================== */
